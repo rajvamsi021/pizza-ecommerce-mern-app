@@ -8,4 +8,4 @@ Admin has access to private admin panel where the admins can delete users, give 
 Admins can add new pizzas and delete pizzas too.
 
 ## Demo
-👉👉 https://ecommerce-pizza-app.herokuapp.com/admin/pizzalist
+👉👉 https://ecommerce-pizza-app.herokuapp.com/
