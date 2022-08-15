@@ -70,6 +70,7 @@ export const deletePizzaFromDB = (pizza_id) => async (dispatch) => {
         const data = await res.json();
         if(data) {
             dispatch({type: 'DELETE_PIZZA_SUCCESS'});
+            dispatch({type: 'GET_PIZZAS_SUCCESS', payload: data.updatedPizzas});
             toast.success(data.message, {position: toast.POSITION.TOP_RIGHT, autoClose: 5000});
         }
         else {

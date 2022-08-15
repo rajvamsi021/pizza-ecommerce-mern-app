@@ -47,8 +47,9 @@ router.post('/addpizza', async (req, res) => {
 router.delete('/delete-pizza/:id', async (req, res) => {
     try {
         const pizzaFound = await Pizza.findOneAndDelete({_id: req.params.id});
+        const updatedPizzas = await Pizza.find({});
         if(pizzaFound) {
-            res.json({message: 'Pizza Deleted Successfully.'});
+            res.json({message: 'Pizza Deleted Successfully.', updatedPizzas: updatedPizzas});
         }
         else {
             res.json({error: 'Pizza Not Found.'});
